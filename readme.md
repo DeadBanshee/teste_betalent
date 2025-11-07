@@ -11,37 +11,22 @@ A aplicação segue os requisitos do teste técnico, implementando uma **API RES
 - **Laravel 10**
 - **MySQL**
 - **Composer**
-- **Docker & Docker Compose** (para o nível 3)
-- **Postman / Insomnia** (para testes das rotas)
+- **Docker**
+- **Postman** (para testes das rotas)
 
 ---
 
 ## 🧩 Estrutura dos Níveis
 
 ### 🟢 Nível 1 - CRUD de Usuários
-- Implementação de rotas REST (`index`, `show`, `store`, `update`, `destroy`)
+- Implementação de rotas REST
 - CRUD completo da entidade `User`
 - Retorno em formato **JSON**
 - Migrações e Seeders para dados iniciais
 
 ### 🟡 Nível 2 - Controle de Acesso e Reembolsos
 - Autenticação com tokens (`Laravel Sanctum`)
-- Criação de middleware para diferenciar **usuário comum** e **administrador**
 - CRUD de **reembolsos** associado ao usuário autenticado
-- Regras de acesso:
-  - Usuário comum: apenas vê e edita seus próprios reembolsos
-  - Administrador: pode ver, editar e excluir todos
-
-### 🔵 Nível 3 - Containerização (Docker)
-- Criação de ambiente de desenvolvimento via **Docker Compose**
-- Serviços:
-  - `app` (Laravel + PHP-FPM)
-  - `mysql` (banco de dados)
-  - `nginx` (proxy reverso)
-- Arquivos principais:
-  - `Dockerfile`
-  - `docker-compose.yml`
-
 ---
 
 ## ⚙️ Como Rodar o Projeto
@@ -49,8 +34,8 @@ A aplicação segue os requisitos do teste técnico, implementando uma **API RES
 ### 🔹 Opção 1: Localmente (sem Docker)
 ```bash
 # Clonar o repositório
-git clone https://github.com/seu-usuario/betalent-teste.git
-cd betalent-teste
+git clone https://github.com/DeadBanshee/teste_betalent
+cd teste_betalent
 
 # Instalar dependências
 composer install
@@ -71,7 +56,3 @@ php artisan migrate --seed
 
 # Iniciar o servidor
 php artisan serve
-
-Histórico:
-Dia 1: preparando ambiente e tabelas
-Dia 2: Criando models e controllers
