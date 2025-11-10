@@ -5,7 +5,7 @@ A aplicação segue os requisitos do teste técnico, implementando uma **API RES
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas/ Requisitos
 
 - **PHP 8.3**
 - **Laravel 10**
@@ -16,21 +16,28 @@ A aplicação segue os requisitos do teste técnico, implementando uma **API RES
 
 ---
 
-## 🧩 Estrutura dos Níveis
+## 🧩 Implementações realizadas
 
 ### Nível escolhido: 2
 - Implementação de rotas REST
 - CRUD completo da entidade `User`
 - Retorno em formato **JSON**
+- Gateways com autenticação
 - Migrações e Seeders para dados iniciais
 - Autenticação com tokens (`Laravel Sanctum`)
 - CRUD de **reembolsos** associado ao usuário autenticado
-- Collection do Postman com todos os endpointes disponíveis
+- Cálculo do valor total baseado no valor de múltiplos produtos
+- Collection do Postman com todos os endpoints disponíveis
 ---
 
-## ⚙️ Como Rodar o Projeto
+## ⛔ Implementadas não realizadas
+- TDD 
+- Autorização por role
+- Docker compose com MySQL, aplicação em Laravel e mocks
 
-### 🔹 Opção 1: Localmente (sem Docker)
+
+
+## ⚙️ Como Rodar o Projeto
 ```bash
 # Clonar o repositório
 git clone https://github.com/DeadBanshee/teste_betalent
