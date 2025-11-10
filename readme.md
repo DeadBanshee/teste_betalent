@@ -11,22 +11,21 @@ A aplicação segue os requisitos do teste técnico, implementando uma **API RES
 - **Laravel 10**
 - **MySQL**
 - **Composer**
-- **Docker**
+- **Docker** (para rodar os mocks)
 - **Postman** (para testes das rotas)
 
 ---
 
 ## 🧩 Estrutura dos Níveis
 
-### 🟢 Nível 1 - CRUD de Usuários
+### Nível escolhido: 2
 - Implementação de rotas REST
 - CRUD completo da entidade `User`
 - Retorno em formato **JSON**
 - Migrações e Seeders para dados iniciais
-
-### 🟡 Nível 2 - Controle de Acesso e Reembolsos
 - Autenticação com tokens (`Laravel Sanctum`)
 - CRUD de **reembolsos** associado ao usuário autenticado
+- Collection do Postman com todos os endpointes disponíveis
 ---
 
 ## ⚙️ Como Rodar o Projeto
@@ -56,3 +55,8 @@ php artisan migrate --seed
 
 # Iniciar o servidor
 php artisan serve
+
+# Rodar os mockups (com autenticação)
+docker run -p 3001:3001 -p 3002:3002 matheusprotzen/gateways-mock
+
+# Importe a collection na raíz do projeto para o Postman, utilize a rota de login para obter um token e coloque-o no header de cada requisição com o prefixo "auth_"

@@ -35,7 +35,7 @@ Route::middleware('auth:sanctum')->group(function () {
     //ROTAS DE GATEWAY E PAGAMENTOS
     Route::patch('/gateways/{id}/status', [GatewayController::class, 'updateStatus']);
     Route::patch('/gateways/{id}/priority', [GatewayController::class, 'updatePriority']);
-    Route::post('/transactions/{transaction}/chargeback', [GatewayController::class, 'refundTransaction']);
+    Route::post('/transactions/{transaction}/refund', [GatewayController::class, 'refundTransaction']);
 
     //ROTAS DOS PRODUTOS
     Route::apiResource('/products', ProductController::class);
