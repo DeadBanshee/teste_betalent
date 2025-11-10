@@ -30,7 +30,7 @@ A aplicação segue os requisitos do teste técnico, implementando uma **API RES
 - Collection do Postman com todos os endpoints disponíveis
 ---
 
-## ⛔ Implementadas não realizadas
+## ⛔ Implementações não realizadas
 - TDD 
 - Autorização por role
 - Docker compose com MySQL, aplicação em Laravel e mocks
